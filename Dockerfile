@@ -1,7 +1,8 @@
 FROM python:3.10-slim
 
-RUN apt-get update && apt-get install -y git curl ffmpeg sox unzip build-essential \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
+    git curl ffmpeg sox unzip build-essential cmake \
+  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
 
